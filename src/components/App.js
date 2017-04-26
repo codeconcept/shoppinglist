@@ -9,7 +9,7 @@ class App extends React.Component {
             <div>
                 <h3>Liste de commissions</h3>
                 <div>
-                    < Form />
+                    < Form formTitle="Ajouter des articles à acheter" />
                     < Itemlist />
                 </div>
             </div>

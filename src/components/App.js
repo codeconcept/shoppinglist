@@ -21,7 +21,9 @@ class App extends React.Component {
                 <h3>Liste de commissions</h3>
                 <div>
                     < Form formTitle="Ajouter des articles à acheter" addArticle={this.addArticle} />
-                    < Itemlist />
+                    <br />
+                    <hr />
+                    < Itemlist articles={this.state.articles} />
                 </div>
             </div>
         );

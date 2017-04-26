@@ -24,7 +24,7 @@ class App extends React.Component {
                     < Form formTitle="Ajouter des articles à acheter" addArticle={this.props.addArticle} />
                     <br />
                     <hr />
-                    < Itemlist articles={this.props.articles} />
+                    < Itemlist articles={this.props.articles} removeArticle={this.props.removeArticle} />
                 </div>
             </div>
         );

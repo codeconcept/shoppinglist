@@ -8,7 +8,7 @@ import App from './components/App';
 const articlesReducer = (state = [], action) => {
     switch(action.type) {
         case 'ADD_ARTICLE':
-            console.log('ADD_ARTICLE reducer');
+            console.log('ADD_ARTICLE');
             console.log('action ', action);
             action.payload.id = Date.now();
             const newState = [...state, action.payload];
@@ -16,6 +16,15 @@ const articlesReducer = (state = [], action) => {
         case 'REMOVE_ARTICLE':
             console.log('REMOVE_ARTICLE');
             return state.filter(article => article.id !== action.payload);
+        case 'EDIT_ARTICLE':
+            console.log('EDIT_ARTICLE');   
+            const articleId = action.payload.id;
+            return state.map(article => {
+                if(article.id !== articleId) {
+                    return article;
+                }
+                return action.payload
+            });
         default:
             return state;    
     }

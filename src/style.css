@@ -6,7 +6,7 @@ input[type="text"], input[type="number"] {
     margin-right: 10px;
 }
 
-.suppr {
+.suppr, .edit {
     margin-right: 10px;
     margin-bottom: 5px;
 }

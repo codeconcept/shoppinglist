@@ -4,12 +4,23 @@ import Form from './Form';
 import Itemlist from './ItemList';
 
 class App extends React.Component {
+    state = { 
+        articles: []
+    }
+
+    addArticle = (article) => {
+        let oldArticles = this.state.articles;
+        article.id = this.state.articles.length + 1;
+        let newArticles = [...oldArticles, article];
+        this.setState({ articles: newArticles});        
+    }
+
     render() {
         return (
             <div>
                 <h3>Liste de commissions</h3>
                 <div>
-                    < Form formTitle="Ajouter des articles à acheter" />
+                    < Form formTitle="Ajouter des articles à acheter" addArticle={this.addArticle} />
                     < Itemlist />
                 </div>
             </div>

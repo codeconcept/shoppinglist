@@ -8,7 +8,9 @@ class Form extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-
+        const article = { name: this.state.name, quantity: this.state.quantity };
+        this.props.addArticle(article);
+        this.setState({ name: '', quantity: 0});
     }
 
     render() {

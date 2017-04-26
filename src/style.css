@@ -1,0 +1,7 @@
+.quantity {
+    width: 60px
+}
+
+input[type="text"], input[type="number"] {
+    margin-right: 10px;
+}

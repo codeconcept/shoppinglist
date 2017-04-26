@@ -18,7 +18,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h3>Liste de commissions</h3>
+                <h1>Liste de commissions</h1>
                 <div>
                     < Form formTitle="Ajouter des articles à acheter" addArticle={this.addArticle} />
                     <br />

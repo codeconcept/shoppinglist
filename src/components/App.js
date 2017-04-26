@@ -46,11 +46,21 @@ const addArticleActionCreator = (article) => {
     }
 }
 
+const removeArticleActionCreator = (articleId) => {
+    return {
+        type: 'REMOVE_ARTICLE',
+        payload: articleId
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         addArticle: (article) => {
-            dispatch(addArticleActionCreator(article))
-        }
+            dispatch(addArticleActionCreator(article));        
+        },
+         removeArticle: (articleId) => {
+            dispatch(removeArticleActionCreator(articleId));
+        }   
     };
 };
 
